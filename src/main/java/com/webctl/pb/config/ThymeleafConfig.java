@@ -20,6 +20,7 @@ public class ThymeleafConfig {
 	public ServletContextTemplateResolver templateResolver() {
 		ServletContextTemplateResolver resolver = new ServletContextTemplateResolver();
 		resolver.setPrefix("/WEB-INF/templates/");
+//		resolver.setCharacterEncoding("UTF-8");
 		resolver.setSuffix(".html");
 		resolver.setTemplateMode("HTML5");
 		resolver.setOrder(1);
@@ -37,6 +38,7 @@ public class ThymeleafConfig {
 	public ThymeleafViewResolver thymeleafViewResolver() {
 		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
 		resolver.setTemplateEngine(templateEngine());
+		resolver.setCharacterEncoding("UTF-8");
 		return resolver;
 	}
 

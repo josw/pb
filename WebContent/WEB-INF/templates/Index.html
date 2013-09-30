@@ -1,0 +1,11 @@
+Hello Thymeleaf!!
+한글은 ? 
+<span th:text="#{helloworld.hi}">hello</span>
+<span th:text="${attr1}">attr</span>
+
+<table>
+	<tr th:each="member : ${members}">
+		<td th:text="${member.id}">memberId</td>
+		<td th:text="${member.name}">memberName</td>
+	</tr>
+</table>
